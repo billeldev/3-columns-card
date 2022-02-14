@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+.card-container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    height: 55%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        height: 55%;
+    }
+    .card-container .container .card {
+        height: 500px;
+    }
+}
+@media (max-width: 768px) {
+    .card-container {
+        height: 100%;
+        padding: 30px 0;
+    }
+    .container {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-auto-rows: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    }
+    .card-container .container .card {
+        height: 450px;
+    }
+}
+
+
+
+.card-container .container .card:nth-child(1) {
+    background-color: hsl(31, 77%, 52%);
+}
+.card-container .container .card:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+.card-container .container .card:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.card-container .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-container .container .card img {
+    width: 70px;
+    margin: 10px 35px 0;
+}
+
+.card-container .container .card .text {
+    margin: 0 35px;
+}
+.card-container .container .card .text h1 {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    position: relative;
+    top: -50px;
+    font-size: 45px;
+    margin-top: 55px;
+}
+.card-container .container .card .text p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+    position: relative;
+    top: -55px;
+}
+.card-container .container .card a {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-left: 35px;
+    text-decoration: none;
+    text-align: center;
+    background-color: hsl(0, 0%, 95%);
+    width: 150px;
+    line-height: 2;
+    padding: 10px;
+    position: relative;
+    top: -35px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.card-container .container .card a:hover {
+    border: 1px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%) !important; 
+    background-color: transparent;
+}
+.card-container .container .card:nth-child(1) a{
+    color: hsl(31, 77%, 52%);
+}
+.card-container .container .card:nth-child(2) a {
+    color: hsl(184, 100%, 22%);
+}
+.card-container .container .card:nth-child(3) a {
+    color: hsl(179, 100%, 13%);
+}
+
